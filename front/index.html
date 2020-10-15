@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add information cpu</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="frame">
+          <table class="table_last_limit">
+            <caption><h3>Таблица со 100 последними записями</h3></caption>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>Время создания</th>
+                  <th>Загрузка CPU</th>
+                </tr>
+            </thead>
+            <tbody class="table_last_limit_tbody">
+
+            </tbody>
+          </table>
+          <div class="sort">
+            <button id="button_sort_asc">Сортировать записи по возрастанию CPU</button>
+            <button id="button_sort_desc">Сортировать записи по убыванию CPU</button>
+          </div>
+          <div class="aggregated">
+            <table class="aggregated_table_last_limit">
+              <caption><h3>Таблица для 100 последних записей</h3></caption>
+                <tr>
+                  <th>min</th>
+                  <th>max</th>
+                  <th>avg</th>
+                </tr>
+            </table>
+            <table class="aggregated_table_all">
+              <caption><h3>Таблица для всех записей в БД </h3></caption>
+                <tr>
+                  <th>min</th>
+                  <th>max</th>
+                  <th>avg</th>
+                </tr>
+            </table>
+          </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
