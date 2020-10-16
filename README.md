@@ -1,6 +1,7 @@
 # information_collection_system
 
 ##Настройка сервера
+
 1)Клонирование репозитория
 ```
 git clone https://github.com/Borutia/information_collection_system.git
