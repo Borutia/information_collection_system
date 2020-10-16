@@ -40,7 +40,7 @@ python client.py
 2. Если нужно на определенном порте 
 python client.py 5000
 ```
-3)Остановка клиент-демона
+3)Остановить клиент-демон
 ```
 start-stop-daemon -Kvx pid_file.pid
 ```
