@@ -2,6 +2,7 @@ import sys
 import time
 import psutil
 import requests
+import daemonize
 
 
 def add_information_cpu(url, cpu_percent):
@@ -10,17 +11,18 @@ def add_information_cpu(url, cpu_percent):
 
 def main():
     url = 'http://127.0.0.1:'
-    limit = 10
     if len(sys.argv) == 2:
         url += sys.argv[1]
     else:
         url += '8001'
     url += '/information_cpu/add_information_cpu'
+    limit = 10
     while True:
         add_information_cpu(url, psutil.cpu_percent())
-        print('save')
         time.sleep(limit)
 
 
 if __name__ == "__main__":
-    main()
+    daemon = daemonize.Daemonize(app='collection_system', pid='pid_file.pid', action=main)
+    daemon.start()
+

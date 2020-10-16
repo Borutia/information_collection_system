@@ -1,4 +1,4 @@
-const url_backend = 'http://127.0.0.1:5000/information_cpu/get_information_cpu';
+const url_backend = 'http://127.0.0.1:' + PORT +'/information_cpu/get_information_cpu';
 var limit_records;
 
 $(function(){  
